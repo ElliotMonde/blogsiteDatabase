@@ -28,8 +28,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
-//let port = process.env.PORT;
-let port = 3000;
+let port = process.env.PORT;
+//  let port = 3000;
 if (port == null || port == " ") {
   port = 3000;
   return port;
