@@ -1,0 +1,29 @@
+<%-include("partials/header"); %>
+ 
+    <h1>
+        <%=postTitle%>
+    </h1>
+    <br>
+    <div>
+        <% homeTitle.forEach(function(post){%>
+                <h2 name="homeTitle" id="homeTitle">
+                    <%= post.Title %>
+                </h2>
+                <br>
+                <p name="homeBody" id="homeBody">
+                    <%= post.Body.substring(0,140)+"..." %>
+                </p>
+                <a id="pageLink" href="/post/<%= post.Title %>">Read More...</a>
+                <%})%>
+                    <!--
+           //for (var n=0;n<posts.length;n++){//   
+            <br>
+            <h2 id="homeTitle" name="homeTitle"><a name="pageLink" href="post///posts[n].postLow%>">//posts[n].postTitle.substring(0,50)%></a></h2>
+            <p id="homePost" name="homePost">//posts[n].postBody.substring(0,99)+"..."%>%></p>
+            <a name="pageLink" href="post///posts[n].postLow//">Read More...</a>
+            //}//
+        -->
+    </div>
+
+
+    <%-include("partials/footer"); %>

@@ -1,0 +1,16 @@
+<%-include("partials/header");%>
+    <h1> 
+        <%=id%>
+    </h1>
+    <div class="form form-div">
+    <form action="/compose" method="post">
+        <label for="postTitle">Title</label>
+        <br><input type="text" name="postTitle" id="postTitle" placeholder="Type Title.." minlength="1" maxlength="150">
+        <br><label for="postBody">Post Content</label>
+        <br><textarea type="text" name="postBody" id="postBody" minlength="1" maxlength="5000"
+            placeholder="Type post content.."></textarea>
+        <br><button type="submit" class="btn btn-primary">Publish</button>
+    </form>
+</div>
+
+    <%-include("partials/footer");%>
